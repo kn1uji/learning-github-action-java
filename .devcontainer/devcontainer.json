@@ -1,0 +1,48 @@
+{
+	"name": "Java17",
+	"build": { "dockerfile": "Dockerfile" },
+
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "false",
+			"installGradle": "true"
+		},
+		"ghcr.io/devcontainers/features/aws-cli:1": {
+			"version": "latest"
+		}
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"richardwillis.vscode-gradle-extension-pack",
+				"shengchen.vscode-checkstyle"
+			]
+		}
+	},
+
+	"runArgs": [
+		//"--env-file",".devcontainer/devcontainer.env",
+		"--name", "template-java-container"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "java -version",
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "vscode",
+	"workspaceMount": "source=${localWorkspaceFolder}/,target=/workspace,type=bind,consistency=cached",
+	"workspaceFolder": "/workspace",
+
+	"mounts": [
+		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
+	]	
+}
