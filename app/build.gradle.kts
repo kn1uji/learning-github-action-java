@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    checkstyle
 }
 
 repositories {
@@ -30,6 +31,11 @@ java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
     }
+}
+
+checkstyle {
+    toolVersion = "10.12.2"
+    configFile = rootProject.file("google_checks.xml");
 }
 
 application {
