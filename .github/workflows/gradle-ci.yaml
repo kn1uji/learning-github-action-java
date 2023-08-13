@@ -2,7 +2,7 @@ name: Gradle build on push
 run-name: Pushed to ${{ github.repository }} by ${{ github.actor }} 🚀
 on: [push]
 jobs:
-  gradle_build:
+  gradle-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
