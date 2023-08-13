@@ -19,14 +19,15 @@
 			"extensions": [
 				"vscjava.vscode-java-pack",
 				"richardwillis.vscode-gradle-extension-pack",
-				"shengchen.vscode-checkstyle"
+				"shengchen.vscode-checkstyle",
+				"fwcd.kotlin"
 			]
 		}
 	},
 
 	"runArgs": [
 		//"--env-file",".devcontainer/devcontainer.env",
-		"--name", "template-java-container"
+		"--name", "learning-github-action-java"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
