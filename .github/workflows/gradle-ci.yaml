@@ -1,8 +1,8 @@
-name: Gradle Build
-run-name: Pushed by ${{ github.actor }} 🚀
+name: Gradle build on push
+run-name: Pushed to ${{ github.repository }} by ${{ github.actor }} 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  gradle_build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

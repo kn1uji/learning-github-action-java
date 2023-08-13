@@ -35,7 +35,6 @@ java {
 
 checkstyle {
     toolVersion = "10.12.2"
-    configFile = rootProject.file("google_checks.xml");
 }
 
 application {
