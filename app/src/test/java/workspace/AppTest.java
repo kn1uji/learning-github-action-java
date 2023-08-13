@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
 
-class AppTest {
+public class AppTest {
 
   @Test
   @SuppressWarnings("checkstyle:AbbreviationAsWordInNameCheck")
