@@ -1,4 +1,4 @@
-name: Gradle IC
+name: Gradle Build
 run-name: Pushed by ${{ github.actor }} 🚀
 on: [push]
 jobs:
